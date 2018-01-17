@@ -1,0 +1,8 @@
+.down-arrow::before {
+    content: "▼";
+    display: inline-block;
+    position: absolute;
+    right: 140px;
+    top: 132px;
+    cursor:pointer;
+}
