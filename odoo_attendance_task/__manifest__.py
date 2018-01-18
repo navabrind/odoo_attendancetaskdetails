@@ -1,7 +1,7 @@
 {
     "name": "Attendance/Time Tracking With Task Details",
     "summary": "Attendance/Time Tracking With Task Details",
-    "category": "HR",
+    "category": "Human Resources",
     "version": "1.0",
     "author": "Navabrind IT Solutions",
     "website": "https://www.navabrinditsolutions.com",
