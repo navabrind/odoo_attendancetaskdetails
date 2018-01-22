@@ -2,8 +2,8 @@
     <data>
         <template id="assets_backend_hr_customize" name="attendance_with_task assets" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
-                <script type="text/javascript" src="/hr_customization/static/src/js/my_attendances.js"/>
-                <link rel="stylesheet" href="/hr_customization/static/src/css/my_attendance.css"/>
+                <script type="text/javascript" src="/odoo_attendance_task/static/src/js/my_attendances.js"/>
+                <link rel="stylesheet" href="/odoo_attendance_task/static/src/css/my_attendance.css"/>
             </xpath>
         </template>
 
@@ -18,7 +18,6 @@
             </field>
         </record>
 
-<!--	Added on 11Jan2018-->
         <record id="view_attendance_tree_inh" model="ir.ui.view">
             <field name="name">hr.attendance.tree.inh</field>
             <field name="model">hr.attendance</field>
@@ -30,7 +29,6 @@
                 </field>
             </field>
         </record>
-<!--	Added on 11Jan2018-->
 
     </data>
 </odoo>

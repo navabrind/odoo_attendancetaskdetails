@@ -1,4 +1,4 @@
-odoo.define('hr_customization.my_attendances', function (require) {
+odoo.define('odoo_attendance_task.my_attendances', function (require) {
 "use strict";
     var core = require('web.core');
     var Model = require('web.Model');
