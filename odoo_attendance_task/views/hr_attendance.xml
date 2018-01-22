@@ -1,0 +1,34 @@
+<odoo>
+    <data>
+        <template id="assets_backend_hr_customize" name="attendance_with_task assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/odoo_attendance_task/static/src/js/my_attendances.js"/>
+                <link rel="stylesheet" href="/odoo_attendance_task/static/src/css/my_attendance.css"/>
+            </xpath>
+        </template>
+
+        <record id="inherit_hr_arrendance_form" model="ir.ui.view">
+            <field name="name">hr.attendance</field>
+            <field name="model">hr.attendance</field>
+            <field name="inherit_id" ref="hr_attendance.hr_attendance_view_form"/>
+            <field name="arch" type="xml">
+                <field name="check_out" position="after">
+                    <field name="task"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_attendance_tree_inh" model="ir.ui.view">
+            <field name="name">hr.attendance.tree.inh</field>
+            <field name="model">hr.attendance</field>
+            <field name="inherit_id" ref="hr_attendance.view_attendance_tree"/>
+            <field name="arch" type="xml">
+                <field name="check_out" position="after">
+                    <field name="worked_hours" widget="float_time" string="Hours"/>
+                    <field name="task" string="Task Details"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

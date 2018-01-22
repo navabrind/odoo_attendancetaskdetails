@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-extend="HrAttendanceMyMainMenu">
+        <t t-jquery="div.o_hr_attendance_kiosk_mode" t-operation="replace">
+            <div class="o_hr_attendance_kiosk_mode">
+                <t t-if="widget.employee">
+                    <h1>Welcome <t t-esc="widget.employee.name"/></h1>
+                    <t t-if="widget.employee.attendance_state=='checked_out'">
+                        <h2>Click to check in</h2>
+                        <span class="down-arrow">
+                            <input type="text"  name="task" id="task" style="width:66%;margin-left:70px;" placeholder="Select/Enter Task here."/>
+                        </span>
+                        <i class="fa fa-sign-in btn-primary o_hr_attendance_sign_in_out_icon"/>
+                    </t>
+                    <t t-if="widget.employee.attendance_state=='checked_in'">
+                        <h2>Click to check out</h2>
+                        <strong>Task - <p t-esc="widget.task"/></strong>
+                        <i class="fa fa-sign-out btn-primary o_hr_attendance_sign_in_out_icon"/>
+                    </t>
+                </t>
+                <t t-if="!widget.employee">
+                    Error : Could not find employee linked to user.
+                </t>
+            </div>
+        </t>
+    </t>
+
+    <t t-extend="HrAttendanceGreetingMessage">
+        <t t-jquery="div.o_hr_attendance_message" t-operation="replace">
+            <div class="o_hr_attendance_message">
+                <t t-if="widget.attendance">
+                    <t t-if="widget.attendance.check_out">
+                        <h1 class="o_hr_attendance_validation">
+                            Checked out at <t t-esc="widget.attendance.check_out_time"/>
+                        </h1>
+                        <h2 class="o_hr_attendance_message_message">
+                            Goodbye <t t-esc="widget.employee_name"/>
+                            <br/>
+                        </h2>
+                        <strong>Task - <p t-esc="widget.task"/></strong>
+                        <h3 class="o_hr_attendance_random_message"></h3>
+                        <h2 class="o_hr_attendance_warning_message"></h2>
+
+                    </t>
+                    <t t-if="!widget.attendance.check_out">
+                        <h1 class="o_hr_attendance_validation">
+                            Checked in at <t t-esc="widget.attendance.check_in_time"/>
+                        </h1>
+                        <h2 class="o_hr_attendance_message_message">
+                            Welcome <t t-esc="widget.employee_name"/>
+                            <br/>
+                        </h2>
+                        <strong>Task - <p t-esc="widget.task"/></strong>
+                        <h3 class="o_hr_attendance_random_message"></h3>
+                        <h2 class="o_hr_attendance_warning_message"></h2>
+                    </t>
+                </t>
+                <t t-if="!widget.attendance">
+                    Invalid request, please return to the main menu.<br/>
+                </t>
+                <button class="o_hr_attendance_button_dismiss btn btn-primary btn-sm">ok</button>
+            </div>
+        </t>
+    </t>
+</templates>
