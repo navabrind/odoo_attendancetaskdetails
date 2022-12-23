@@ -3,8 +3,8 @@
     "summary": "Attendance/Time Tracking With Task Details",
     "category": "Human Resources",
     "version": "1.0",
-    "author": "Navabrind IT Solutions",
-    "website": "https://www.navabrinditsolutions.com",
+    "author": "Navabrind IT Solutions Pvt Ltd",
+    "website": "https://www.navabrindsol.com",
     "description": """Attendance/Time Tracking With Task Details upon Check In/Check Out""",
     "depends": ['base', 'web', 'hr_attendance'],
     "data": [
@@ -15,7 +15,7 @@
     'images':['images/Banner_Image.png'],
     "installable": True,
     "auto_install": False,
-    "price": 0,
+    "price": 5.0,
     "currency": "EUR",
 	'license': 'AGPL-3'
 
