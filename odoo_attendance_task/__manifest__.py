@@ -14,7 +14,7 @@
     'qweb': ['static/src/xml/attendance.xml'],
     'images':['images/Banner_Image.png'],
     "installable": True,
-    "auto_install": False,
+    "application": True,
     "price": 5.0,
     "currency": "EUR",
 	'license': 'AGPL-3'
