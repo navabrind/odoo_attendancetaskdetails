@@ -15,7 +15,7 @@
     'images':['images/Banner_Image.png'],
     "installable": True,
     "application": True,
-    "price": 5.0,
+    "price": 0,
     "currency": "EUR",
 	'license': 'AGPL-3'
 
