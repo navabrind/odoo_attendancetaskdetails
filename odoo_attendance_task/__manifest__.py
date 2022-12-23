@@ -15,7 +15,7 @@
     'images':['images/Banner_Image.png'],
     "installable": True,
     "auto_install": False,
-    "price": 0,
+    "price": 5.0,
     "currency": "EUR",
     'license': 'AGPL-3'
 }
